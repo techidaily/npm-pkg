@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "strict": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "types": ["jest", "node"],
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "test/*": ["./test/*"],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "entry": [
+    "src/index.ts"
+  ],
+  "format": [
+    "esm",
+    "cjs"
+  ],
+  "dts": {
+    "resolve": true
+  },
+  "splitting": true,
+  "clean": true,
+  "sourcemap": true
+}
