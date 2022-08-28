@@ -1,0 +1,22 @@
+# https://ls-lint.org/
+
+ls:
+  # .dir: kebabcase | pointcase | snakecase | pascalcase | camelcase
+  # .js: kebabcase | pointcase | snakecase | pascalcase | camelcase
+  .ts: kebabcase | pointcase | snakecase
+  .d.ts: kebabcase | pointcase | snakecase
+  .spec.ts: kebabcase | pointcase | snakecase
+  .mock.ts: kebabcase | pointcase | snakecase
+
+ignore:
+  - _nuxt
+  - .nuxt
+  - .nuxt_mom
+  - .git
+  - .idea
+  - .vscode
+  - .DS_Store}
+  - dist
+  - coverage
+  - node_modules
+  - jspm_packages

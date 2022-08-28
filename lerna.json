@@ -1,0 +1,32 @@
+{
+  "version": "independent",
+  "npmClient": "pnpm",
+  "useWorkspaces": false,
+  "exact": false,
+  "conventionalCommits": true,
+  "packages": [
+    "packages/**",
+    "distributions/**"
+  ],
+  "command": {
+    "create": {
+      "license": "MIT"
+    },
+    "publish": {
+      "npmClient": "npm",
+      "message": "chore(release): ${nextRelease.version}",
+      "registry": "https://registry.npmjs.org",
+      "ignoreChanges": [
+        "**/test/fixture/**"
+      ]
+    },
+    "version": {
+      "noChangelog": true,
+      "noGitTagVersion": true,
+      "noPush": true
+    },
+    "init": {
+      "exact": true
+    }
+  }
+}
