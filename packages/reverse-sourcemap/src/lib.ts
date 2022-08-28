@@ -14,12 +14,20 @@ export const readSourceMapFile = (file: string): SourceMap => {
   return sourceMap;
 }
 
-export const reverse = (sourceMap: Object, workDir: string): void => {
-  // const { sources, sourcesContent } = sourceMap;
-  // const sourceMapSources = sources.map((source: string) => {
-  //   return source.replace(workDir, '');
-  // }).reverse();
-  // const sourceMapSourcesContent = sourcesContent.reverse();
-  // sourceMap.sources = sourceMapSources;
-  // sourceMap.sourcesContent = sourceMapSourcesContent;
+export const reverse = (sourceMap: SourceMap, workDir: string): void => {
+  const { sources, sourcesContent } = sourceMap;
+  // get sources files work dir path
+  const workDirPath = sources[0].split('/').slice(0, -1).join('/');
+  // get sources files relative path
+  const sourcesRelativePath = sources.map(source => source.replace(workDirPath, ''));
+
+
+
+
+  const sourceMapSources = sources.map((source: string) => {
+    return source.replace(workDir, '');
+  }).reverse();
+  const sourceMapSourcesContent = sourcesContent.reverse();
+  sourceMap.sources = sourceMapSources;
+  sourceMap.sourcesContent = sourceMapSourcesContent;
 }
