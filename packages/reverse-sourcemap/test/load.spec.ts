@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import path from "node:path";
 import { describe, expect, test } from '@jest/globals';
 import { readSourceMapFile, reverse } from '@/lib';
 
@@ -26,7 +27,7 @@ describe('reverse a source map file', () => {
     const jsonObj = readSourceMapFile(file);
     reverse(jsonObj, workDir);
 
-    expect(fs.existsSync('@/../tmp/src/index.ts')).toBeTruthy();
+
     expect(fs.existsSync('@/../tmp/src/client.ts')).toBeTruthy();
     expect(fs.existsSync('@/../tmp/src/transport.ts')).toBeTruthy();
     expect(fs.existsSync('@/../tmp/src/react.tsx')).toBeTruthy();

@@ -1,5 +1,7 @@
 
+import { dir } from 'node:console';
 import fs from 'node:fs';
+import path from 'node:path';
 
 interface SourceMap {
   version: number;
@@ -16,18 +18,19 @@ export const readSourceMapFile = (file: string): SourceMap => {
 
 export const reverse = (sourceMap: SourceMap, workDir: string): void => {
   const { sources, sourcesContent } = sourceMap;
-  // get sources files work dir path
-  const workDirPath = sources[0].split('/').slice(0, -1).join('/');
-  // get sources files relative path
-  const sourcesRelativePath = sources.map(source => source.replace(workDirPath, ''));
 
-
-
-
-  const sourceMapSources = sources.map((source: string) => {
-    return source.replace(workDir, '');
-  }).reverse();
-  const sourceMapSourcesContent = sourcesContent.reverse();
-  sourceMap.sources = sourceMapSources;
-  sourceMap.sourcesContent = sourceMapSourcesContent;
+  let dirDeep = 0;
+  sources.forEach((source, index) => {
+    const curLength = source.match(/\.\.\//g)?.length || 0;
+    dirDeep = Math.max(curLength, dirDeep);
+  });
+  const refDir = "0/".repeat(dirDeep);
+  sourcesContent.forEach((source, index) => {
+    const filePath = path.resolve(workDir, refDir, sources[index]);
+    const dirPath = path.dirname(filePath);
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath, { recursive: true });
+    }
+    fs.writeFileSync(filePath, sourcesContent[index]);
+  });
 }
