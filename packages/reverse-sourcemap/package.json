@@ -2,19 +2,19 @@
   "name": "@techidaily/reverse-sourcemap",
   "version": "1.0.0",
   "description": "sourcemap  file reverse tool",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsup build",
-    "test": "jest"
-  },
   "keywords": [
     "sourcemap",
     "reverse",
     "sourcemap tool",
     "reverse sourcemap tool"
   ],
-  "author": "",
   "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup build",
+    "test": "jest"
+  },
   "devDependencies": {
     "@jest/globals": "^29.0.1",
     "@types/jest": "^28.1.8",
