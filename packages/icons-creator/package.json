@@ -1,0 +1,41 @@
+{
+  "name": "icons-creator",
+  "version": "1.0.4",
+  "private": false,
+  "description": "Generate all app market icons from a single input image (iOS + Android + macOS + Web)",
+  "keywords": [
+    "icons",
+    "app icons",
+    "app icon generator",
+    "macOS",
+    "iOS",
+    "Android",
+    "Web"
+  ],
+  "homepage": "https://techidaily.com",
+  "bugs": "https://github.com/techidaily/npm-pkg/issues",
+  "repository": "https://github.com/techidaily/npm-pkg",
+  "license": "MIT",
+  "author": "Ian <support@techidaily.com> (https://techidaily.com)",
+  "main": "index.js",
+  "bin": {
+    "icons-creator": "./bin/icons-creator"
+  },
+  "scripts": {
+    "test": "mocha --ui bdd --reporter spec"
+  },
+  "dependencies": {
+    "async": "0.2.5",
+    "commander": "~2.0.0",
+    "gm": "^1.23.1",
+    "imagemagick": "~0.1.3",
+    "minimist": ">=0.2.1",
+    "underscore": "~1.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}
