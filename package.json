@@ -8,7 +8,7 @@
     "git:setting": "git config core.autocrlf false && git config advice.addIgnoredFile false",
     "postinstall": "lerna link",
     "ls-lint": "ls-lint",
-    "release": "lerna publish"
+    "release": "lerna publish --no-push"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.1",
