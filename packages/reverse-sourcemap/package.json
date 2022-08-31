@@ -1,6 +1,6 @@
 {
   "name": "@techidaily/reverse-sourcemap",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "description": "sourcemap  file reverse tool",
   "keywords": [
     "sourcemap",
@@ -8,12 +8,31 @@
     "sourcemap tool",
     "reverse sourcemap tool"
   ],
-  "license": "ISC",
-  "author": "",
-  "main": "index.js",
+  "license": "MPL-2.0",
+  "author": "techidaily<support@techidaily.com> (http://techidaily.com)",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "reverse-sourcemap": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup build",
+    "build": "pnpm run build:cli && pnpm run build:lib",
+    "build:cli": "tsup --config ./tsup.config.cli.ts",
+    "build:lib": "tsup --config ./tsup.config.lib.ts",
+    "prepublishOnly": "pnpm run build && pnpm run test",
     "test": "jest"
+  },
+  "dependencies": {
+    "commander": "^9.4.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.0.1",
@@ -23,5 +42,8 @@
     "ts-jest": "^28.0.8",
     "tsup": "^6.2.3",
     "typescript": "^4.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
