@@ -13,7 +13,7 @@ afterEach(() => {
 
 describe('cli', () => {
   test('run', () => {
-    child_process.execSync(`node dist/cli.js -w ./tmp -f ./test/fixtures/@rspc/client/index.mjs.map`, {
+    child_process.execSync(`node dist/cli.js -o ./tmp -f ./test/fixtures/@rspc/client/index.mjs.map`, {
       cwd: path.resolve(__dirname, '..'),
     });
 
