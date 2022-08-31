@@ -1,6 +1,6 @@
 {
   "name": "@techidaily/reverse-sourcemap",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "sourcemap  file reverse tool",
   "keywords": [
     "sourcemap",
@@ -8,6 +8,8 @@
     "sourcemap tool",
     "reverse sourcemap tool"
   ],
+  "homepage": "https://techidaily.com",
+  "repository": "https://github.com/techidaily/npm-pkg",
   "license": "MPL-2.0",
   "author": "techidaily<support@techidaily.com> (http://techidaily.com)",
   "exports": {
