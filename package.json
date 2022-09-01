@@ -9,6 +9,8 @@
     "postinstall": "lerna link",
     "ls-lint": "ls-lint",
     "release": "lerna publish --no-push",
+    "release:canary": "lerna publish --canary --no-push",
+    "release:next": "lerna publish --canary --preid next --no-push",
     "release:pkg": "lerna publish from-package --no-push"
   },
   "devDependencies": {
