@@ -6,7 +6,6 @@
   "author": "techidaily<support@techidaily.com> (http://techidaily.com)",
   "scripts": {
     "git:setting": "git config core.autocrlf false && git config advice.addIgnoredFile false",
-    "postinstall": "lerna link",
     "ls-lint": "ls-lint",
     "release": "lerna publish --no-push",
     "release:canary": "lerna publish --canary --no-push",
@@ -14,12 +13,12 @@
     "release:pkg": "lerna publish from-package --no-push"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.1",
+    "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@ls-lint/ls-lint": "^1.11.2",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "husky": "^8.0.1",
-    "lerna": "^5.4.3",
+    "lerna": "^5.5.0",
     "ts-node": "^10.9.1"
   }
 }
