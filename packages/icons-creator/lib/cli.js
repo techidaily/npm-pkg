@@ -54,7 +54,7 @@ if(commander.onlyMac) {
 iconerator.checkDependencies(function(err){
     if(err){
         console.error(err);
-        //process.exit(1);
+        process.exit(1);
     }
     iconerator.generateIcons(inputImage, outputPath, platform, device, function(err){
         if(err){

@@ -1,12 +1,13 @@
 "use strict";
 
 var fs = require('fs'),
+    fse = require('fs-extra'),
     path = require('path'),
     gm = require('gm'),
-    im = require('imagemagick'),
     async = require('async'),
     _ = require('underscore'),
     child_process = require('child_process'),
+    im = require('./imagemagick'),
     config = require(__dirname+'/config');
 
 
@@ -18,8 +19,22 @@ function createWebIconFolders(outputPath) {
 
 function createAndroidIconFolders(outputPath) {
     var baseDir = path.join(outputPath, config.output.androidDir);
-    var dirs = ['', '/res', '/res/drawable-ldpi', '/res/drawable-mdpi', '/res/drawable-hdpi', 
-                 '/res/drawable-xhdpi', '/res/drawable-xxhdpi', '/res/drawable-xxxhdpi'];
+    const dirs = [
+        '',
+        '/res',
+        '/res/drawable-ldpi',
+        '/res/drawable-mdpi',
+        '/res/drawable-hdpi',
+        '/res/drawable-xhdpi',
+        '/res/drawable-xxhdpi',
+        '/res/drawable-xxxhdpi',
+        '/res/mipmap-ldpi',
+        '/res/mipmap-mdpi',
+        '/res/mipmap-hdpi',
+        '/res/mipmap-xhdpi',
+        '/res/mipmap-xxhdpi',
+        '/res/mipmap-xxxhdpi'
+    ];
     
     for(var i = 0; i < dirs.length; i++){
         if(!fs.existsSync(path.join(baseDir, dirs[i]))) fs.mkdirSync(baseDir + dirs[i]);
@@ -48,9 +63,9 @@ exports.checkDependencies = function(cb) {
             });
         });
     } else if (['win32'].includes(process.platform)){
-        child_process.exec("where magick", function(err, stdout){
+        child_process.exec("where magick.exe", function(err, stdout){
             if(err || stdout === "") return cb("ImageMagick binary not found");
-            child_process.exec("where gm", function(err, stdout){
+            child_process.exec("where gm.exe", function(err, stdout){
                 if(err || stdout === "") return cb("GraphicsMagick binary not found");
                 cb(null);
             });
@@ -67,6 +82,8 @@ exports.generateIcons = function(inputImg, outputPath, platform, device, cb) {
        if(cb) return cb(error);
        else throw error;
     }
+
+    fse.ensureDirSync(outputPath, 0o2775);
 
     if(platform === "ios") {
         if(device === "phone") iconMeta = _.where(config.icons, { platform: 'iOS', device: 'phone' });
@@ -111,27 +128,35 @@ exports.generateIcons = function(inputImg, outputPath, platform, device, cb) {
                    console.error("Error generating %s (res: %s) icon: %s:: %s", meta.platform, (meta.resolution || ''), meta.file_name, err);
                    return cb(error);
                } else {
-                    //console.log("Generated %s (res: %s) icon: %s", meta.platform, (meta.resolution || ''), meta.file_name);
+                //    console.log("Generated %s (res: %s) icon: %s", meta.platform, (meta.resolution || ''), meta.file_name);
                    cb(null);
                }
             });
         } else {
             gm(inputImg)
-              .background('none') 
-              .noProfile()
-              .resize(meta.width, meta.height)
-              .gravity('Center')
-              .extent(meta.width, meta.height)
-              .quality(100)
-              .write(outputFile, function(err){
-                 if(err) {
-                     console.error("Error generating %s (res: %s) icon: %s:: %s", meta.platform, (meta.resolution || ''), meta.file_name, err);
-                     return cb(error);
-                 } else {
-                      //console.log("Generated %s (res: %s) icon: %s", meta.platform, (meta.resolution || ''), meta.file_name);
-                     cb(null);
-                 }
-              });
+            .background('none')
+            .noProfile()
+            .resize(meta.width, meta.height)
+            .gravity('Center')
+            .extent(meta.width, meta.height)
+            .quality(100)
+            .write(outputFile, function(err){
+               if(err) {
+                   console.error("Error generating %s (res: %s) icon: %s:: %s", meta.platform, (meta.resolution || ''), meta.file_name, err);
+                   return cb(error);
+               } else {
+                    //console.log("Generated %s (res: %s) icon: %s", meta.platform, (meta.resolution || ''), meta.file_name);
+
+                   // Copy android drawable files to mipmap dirs
+                   if(meta.platform === 'Android' && meta.type === 'Launcher Icon'){
+                      var drawableOutputFile = path.join(outputPath, config.output.androidDir, 'res', 'drawable-' + meta.resolution, meta.file_name);
+                      var mipmapOutputFile = path.join(outputPath, config.output.androidDir, 'res', 'mipmap-' + meta.resolution, meta.file_name);
+                      fs.copyFileSync(drawableOutputFile, mipmapOutputFile);
+                   }
+
+                   cb(null);
+               }
+            });
         }
     }, function(err){
         if(err){
