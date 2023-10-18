@@ -1,6 +1,6 @@
 {
   "name": "icons-creator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "Generate all app market icons from a single input image (iOS + Android + macOS + Web)",
   "keywords": [
@@ -12,11 +12,11 @@
     "Android",
     "Web"
   ],
-  "homepage": "https://techidaily.com",
+  "homepage": "https://www.buymeacoffee.com/techidaily.com/",
   "bugs": "https://github.com/techidaily/npm-pkg/issues",
   "repository": "https://github.com/techidaily/npm-pkg",
   "license": "MIT",
-  "author": "Ian <support@techidaily.com> (https://techidaily.com)",
+  "author": "Ian <support@techidaily.com> (https://www.buymeacoffee.com/techidaily.com/)",
   "main": "index.js",
   "bin": {
     "icons-creator": "./bin/icons-creator"
