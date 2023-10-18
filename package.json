@@ -3,5 +3,8 @@
   "private": true,
   "description": "",
   "license": "MPL-2.0",
-  "author": "techidaily<support@techidaily.com> (http://techidaily.com)"
+  "author": "techidaily<support@techidaily.com> (http://techidaily.com)",
+  "scripts": {
+    "ci:publish": "pnpm publish -r"
+  }
 }
