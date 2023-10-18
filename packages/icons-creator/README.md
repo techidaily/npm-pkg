@@ -2,13 +2,9 @@
 
 Automatically generate all app market icons from a single image (iOS + Android + macOS + Web).
 
-[![NPM](https://nodei.co/npm/icons-creator.png?downloads=true)](https://nodei.co/npm/icons-creator/)
+<a href="https://www.buymeacoffee.com/techidaily.com" target="_blank"><img src="https://cdn.buymeacoffee.com/uploads/gallery/4495928/2023-10-18/icon_512x5122x.png" alt="Buy Me A Coffee" style="height: 120px !important;" ></a>
 
-<br/>
-<a href="https://www.buymeacoffee.com/techidaily"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
-<br/><br/>
-
-## Refrences
+## References
 
 * [macOS Icons and Images](https://developer.apple.com/design/human-interface-guidelines/macos/icons-and-images/app-icon/)
 * [iOS Icons and Images](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/IconMatrix.html)
@@ -18,24 +14,26 @@ Automatically generate all app market icons from a single image (iOS + Android +
 
 ### Requirement
 
-First download and install `GraphicsMagick` or `ImageMagick`.
+1. First, you need to install `nodejs` on your computer. You can download and install nodejs from [here](https://nodejs.org/en/download/).
 
-* For macOS user
+2. Next download and install `GraphicsMagick` or `ImageMagick`.
 
-    In Mac OS X / macOS, you can simply use Homebrew and do:
+   * For `macOS` user
 
-    ``` bash
-    $ brew install imagemagick graphicsmagick
-    ```
+       In Mac OS X / macOS, you can simply use Homebrew and do:
 
-* For Windows user
+       ``` bash
+       $ brew install imagemagick graphicsmagick
+       ```
 
-    In Windows, you can also use [Chocolatey](tps://community.chocolatey.org) and do:
+   * For `Windows` user
 
-    ``` bash
-    > choco install imagemagick graphicsmagick
-    > refreshenv
-    ```
+       In Windows, you can also use [Chocolatey](tps://community.chocolatey.org) and do:
+
+       ``` bash
+       > choco install imagemagick graphicsmagick
+       > refreshenv
+       ```
 
 ### SETUP/INSTALL
 
@@ -46,7 +44,7 @@ npm install -g icons-creator
 ```
 
 <br/>
-<a href="https://www.buymeacoffee.com/techidaily"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<a href="https://www.buymeacoffee.com/techidaily.com" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 <br/><br/>
 
 ## Usage
@@ -112,14 +110,15 @@ The full list of default icon sizes (in pixels) is:
 * 64x64 (Web - favicon)
 
 <br/>
-<a href="https://www.buymeacoffee.com/techidaily"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<a href="https://www.buymeacoffee.com/techidaily.com" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 <br/><br/>
+
 
 ## License
 
 MIT License
 
-Copyright (c) 2021 Techidaily (https://techidaily.com)
+Copyright (c) 2023 Techidaily (https://techidaily.com)
  
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
