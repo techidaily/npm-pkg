@@ -3,7 +3,7 @@
 Automatically generate all app market icons from a single image (iOS + Android + macOS + Web).
 
 <br/>
-<a href="https://www.buymeacoffee.com/iansun"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<a href="https://www.buymeacoffee.com/JamiHistory"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
 <br/><br/>
 
 ## References
@@ -46,7 +46,7 @@ npm install -g icons-creator
 ```
 
 <br/>
-<a href="https://www.buymeacoffee.com/iansun"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<a href="https://www.buymeacoffee.com/JamiHistory"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
 <br/><br/>
 
 ## Usage
@@ -112,7 +112,7 @@ The full list of default icon sizes (in pixels) is:
 * 64x64 (Web - favicon)
 
 <br/>
-<a href="https://www.buymeacoffee.com/iansun"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<a href="https://www.buymeacoffee.com/JamiHistory"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
 <br/><br/>
 
 
