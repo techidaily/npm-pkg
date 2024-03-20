@@ -55,6 +55,14 @@ sitemap:
 - **gzip** - Generate sitemap.xml.gz (Default: `true`)
 - **max_urls_per_sitemap** - Maximum number of URLs per sitemap file. (Default: 50000)
 
+Will generate sitemap.xml and sitemap.xml.gz in the public folder.
+
+If has sitemap index file, will generate `sitemap_index.xml` and `sitemap_index.xml.gz` in the public folder.
+
+See: 
+  - https://developers.google.cn/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=zh-tw#general-guidelines
+  - https://developers.google.cn/search/docs/crawling-indexing/sitemaps/large-sitemaps?hl=zh-tw
+
 ## Exclude Posts/Pages
 
 Add `sitemap: false` to the post/page's front matter.

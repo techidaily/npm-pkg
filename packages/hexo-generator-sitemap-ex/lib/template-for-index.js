@@ -25,7 +25,7 @@ module.exports = function(config) {
   sitemapTmpl = nunjucks.compile(readFileSync(sitemapSrc, 'utf8'), env);
 
   return {
-    path: 'sitemap-index.xml',
+    path: 'sitemap_index.xml',
     data: sitemapTmpl
   };
 };
