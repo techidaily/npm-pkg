@@ -7,7 +7,7 @@ const templateForIndex = require('./template-for-index');
 module.exports = function(locals) {
   const { config } = this;
   const { sitemap, skip_render } = config;
-  const { tags: tagsCfg, categories: catsCfg, siteUrl, gzip: enableGZip } = sitemap;
+  const { tags: tagsCfg, categories: catsCfg, site_url, gzip: enableGZip, max_urls_per_sitemap = 50000 } = sitemap;
   const skipRenderList = [
     '**/*.js',
     '**/*.css'
@@ -37,7 +37,7 @@ module.exports = function(locals) {
   const postsGroup = [];
 
   while (posts.length > 0) {
-    postsGroup.push(posts.splice(0, 50000));
+    postsGroup.push(posts.splice(0, max_urls_per_sitemap));
   }
 
   const sitemapFileNames = [];
@@ -68,10 +68,10 @@ module.exports = function(locals) {
       }
 
 
-      if (siteUrl[siteUrl.length - 1] === '/') {
-        sitemapFileNames.push(`${siteUrl}${resList[i].path}${zipExt}`);
+      if (site_url[site_url.length - 1] === '/') {
+        sitemapFileNames.push(`${site_url}${resList[i].path}${zipExt}`);
       } else {
-        sitemapFileNames.push(`${siteUrl}/${resList[i].path}${zipExt}`);
+        sitemapFileNames.push(`${site_url}/${resList[i].path}${zipExt}`);
       }
     }
 

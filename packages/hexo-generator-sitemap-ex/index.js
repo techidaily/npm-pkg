@@ -8,8 +8,9 @@ hexo.config.sitemap = Object.assign({
   rel: false,
   tags: true,
   categories: true,
-  siteUrl: hexo.config.url,
-  gzip: true
+  site_url: hexo.config.url,
+  gzip: true,
+  max_urls_per_sitemap: 50000
 }, hexo.config.sitemap);
 
 const config = hexo.config.sitemap;

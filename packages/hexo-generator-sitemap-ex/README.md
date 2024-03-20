@@ -40,8 +40,9 @@ sitemap:
   rel: false
   tags: true
   categories: true
-  siteUrl: https://www.example.com
-  gzip: true
+  site_url: https://www.example.com
+  gzip: true,
+  max_urls_per_sitemap: 50000
 ```
 
 - **path** - Sitemap path. (Default: sitemap.xml)
@@ -50,8 +51,9 @@ sitemap:
 - **rel** - Add [`rel-sitemap`](http://microformats.org/wiki/rel-sitemap) to the site's header. (Default: `false`)
 - **tags** - Add site's tags
 - **categories** - Add site's categories
-- **siteUrl** - Site URL. (Default: config.url)
+- **site_url** - Site URL. (Default: config.url)
 - **gzip** - Generate sitemap.xml.gz (Default: `true`)
+- **max_urls_per_sitemap** - Maximum number of URLs per sitemap file. (Default: 50000)
 
 ## Exclude Posts/Pages
 
