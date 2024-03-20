@@ -1,0 +1,54 @@
+{
+  "name": "hexo-generator-sitemap-ex",
+  "version": "3.0.1",
+  "description": "Sitemap and Sitemap Index files generator plugin for Hexo",
+  "main": "index",
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "mocha test/index.js",
+    "test-cov": "nyc --reporter=lcov npm run test"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "sitemap-index.xml",    
+    "sitemap.xml",
+    "sitemap.txt"
+  ],
+  "repository": "hexojs/hexo-generator-sitemap-ex",
+  "keywords": [
+    "hexo",
+    "sitemap",
+    "seo",
+    "generator"
+  ],
+  "authors": [
+    "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)"
+  ],
+  "maintainers": [
+    "Abner Chou <hi@abnerchou.me> (http://abnerchou.me)",
+    "techidaily<support@techidaily.com> (http://techidaily.com)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "hexo-util": "^3.0.1",
+    "micromatch": "^4.0.2",
+    "nunjucks": "^3.1.6"
+  },
+  "devDependencies": {
+    "camaro": "^6.1.0",
+    "chai": "^4.2.0",
+    "cheerio": "^0.22.0",
+    "eslint": "^8.0.0",
+    "eslint-config-hexo": "^5.0.0",
+    "hexo": "^7.0.0",
+    "mocha": "^10.0.0",
+    "nyc": "^15.0.0"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  }
+}
