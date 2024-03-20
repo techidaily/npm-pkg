@@ -5,21 +5,20 @@ Generate sitemap and sitemap index files for search engines.
 ## Install
 
 ``` bash
-$ npm install hexo-generator-sitemap-ex --save
+npm install hexo-generator-sitemap-ex --save
 ```
 
 or
 
 ``` bash
-$ yarn add hexo-generator-sitemap-ex
+yarn add hexo-generator-sitemap-ex
 ```
 
 or
 
 ``` bash
-$ pnpm add hexo-generator-sitemap-ex
+pnpm add hexo-generator-sitemap-ex
 ```
-
 
 - Hexo >=5: 3.x
 - Hexo 4: 2.x
@@ -59,9 +58,14 @@ Will generate sitemap.xml and sitemap.xml.gz in the public folder.
 
 If has sitemap index file, will generate `sitemap_index.xml` and `sitemap_index.xml.gz` in the public folder.
 
-See: 
-  - https://developers.google.cn/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=zh-tw#general-guidelines
-  - https://developers.google.cn/search/docs/crawling-indexing/sitemaps/large-sitemaps?hl=zh-tw
+See:
+
+- <https://developers.google.cn/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=zh-tw#general-guidelines>
+- <https://developers.google.cn/search/docs/crawling-indexing/sitemaps/large-sitemaps?hl=zh-tw>
+
+You can see the [https://techidaily.com](https://techidaily.com) for example.
+
+Download the [https://techidaily.com](https://techidaily.com)/sitemap.xml.gz file and open it with a text editor.
 
 ## Exclude Posts/Pages
 
