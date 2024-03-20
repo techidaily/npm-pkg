@@ -5,7 +5,7 @@
   "license": "MPL-2.0",
   "author": "techidaily<support@techidaily.com> (http://techidaily.com)",
   "scripts": {
-    "ci:publish": "pnpm publish -r --no-git-checks"
+    "ci:publish": "pnpm publish -r --no-git-checks --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2"

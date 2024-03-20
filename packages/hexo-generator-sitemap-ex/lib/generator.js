@@ -46,11 +46,13 @@ module.exports = function(locals) {
   for (let indexOfSiteMaps = 0; indexOfSiteMaps < postsGroup.length; indexOfSiteMaps++) {
     const gzResList = [];
 
+    const postList = postsGroup[indexOfSiteMaps];
+
     const resList = template(config, indexOfSiteMaps);
     for (const i in resList) {
       resList[i].data = resList[i].data.render({
         config,
-        posts,
+        posts: postList,
         sNow: new Date(),
         tags: tagsCfg ? locals.tags.toArray() : [],
         categories: catsCfg ? locals.categories.toArray() : []
@@ -82,6 +84,15 @@ module.exports = function(locals) {
       config,
       sitemaps: sitemapFileNames
     });
+
+    if (enableGZip) {
+      const zlib = require('node:zlib');
+      const zipExt = enableGZip ? '.gz' : '';
+      allResList.push({
+        path: `${res.path}${zipExt}`,
+        data: zlib.gzipSync(res.data)
+      });
+    }
 
     allResList.push(res);
   }
