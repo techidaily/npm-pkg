@@ -3,6 +3,7 @@
   {% for gzurl in sitemaps %}  
   <sitemap>
     <loc>{{gzurl}}</loc>
+    <lastmod>{{sNow}}</lastmod>
   </sitemap>
-  {% endfor %}  
+  {% endfor %}
 </sitemapindex>

@@ -37,7 +37,7 @@ module.exports = function(locals) {
   const postsGroup = [];
 
   while (posts.length > 0) {
-    postsGroup.push(posts.splice(0, max_urls_per_sitemap));
+    postsGroup.push(posts.splice(0, Math.max(max_urls_per_sitemap - 1, 0))); // Safe way to avoid infinite loop
   }
 
   const sitemapFileNames = [];
@@ -82,7 +82,9 @@ module.exports = function(locals) {
     const res = templateForIndex(config);
     res.data = res.data.render({
       config,
-      sitemaps: sitemapFileNames
+      sitemaps: sitemapFileNames,
+      // date, now, use W3C Datetime format
+      sNow: new Date().toISOString()
     });
 
     if (enableGZip) {
