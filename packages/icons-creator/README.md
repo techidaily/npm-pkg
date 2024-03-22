@@ -3,7 +3,7 @@
 Automatically generate all app market icons from a single image (iOS + Android + macOS + Web).
 
 <br/>
-<a href="https://www.buymeacoffee.com/JamiHistory"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<a href="https://www.paypal.com/ncp/payment/FBZEL5WWHC7CS"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
 <br/><br/>
 
 ## References
@@ -44,10 +44,6 @@ Then install icons-creator via npm with:
 ``` bash
 npm install -g icons-creator
 ```
-
-<br/>
-<a href="https://www.buymeacoffee.com/JamiHistory"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
-<br/><br/>
 
 ## Usage
 
@@ -111,10 +107,6 @@ The full list of default icon sizes (in pixels) is:
 * 48x48 (Web - favicon)
 * 64x64 (Web - favicon)
 
-<br/>
-<a href="https://www.buymeacoffee.com/JamiHistory"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
-<br/><br/>
-
 
 ## License
 
@@ -140,3 +132,9 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Donate
+
+<br/>
+<a href="https://www.paypal.com/ncp/payment/FBZEL5WWHC7CS"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; "  target="_blank"></a>
+<br/><br/>

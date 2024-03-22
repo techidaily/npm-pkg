@@ -9,7 +9,7 @@ hexo.config.sitemap = Object.assign({
   tags: true,
   categories: true,
   site_url: hexo.config.url,
-  gzip: true,
+  gzip: false,
   max_urls_per_sitemap: 50000
 }, hexo.config.sitemap);
 
