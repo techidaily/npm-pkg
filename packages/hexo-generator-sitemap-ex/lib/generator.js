@@ -78,7 +78,7 @@ module.exports = function(locals) {
     allResList.push(...resList, ...gzResList);
   }
 
-  if (postsGroup.length > 1) {
+  if (postsGroup.length > 0) {
     const res = templateForIndex(config);
     res.data = res.data.render({
       config,
