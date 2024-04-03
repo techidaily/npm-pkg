@@ -1,13 +1,15 @@
 'use strict';
 
+const { join, extname, basename } = require('path');
 const micromatch = require('micromatch');
 const template = require('./template');
 const templateForIndex = require('./template-for-index');
 
+
 module.exports = function(locals) {
   const { config } = this;
   const { sitemap, skip_render } = config;
-  const { tags: tagsCfg, categories: catsCfg, site_url, gzip: enableGZip, max_urls_per_sitemap = 50000 } = sitemap;
+  const { tags: tagsCfg, categories: catsCfg, site_url, gzip: enableGZip, max_urls_per_sitemap = 21000, path: siteMapFileCfg } = sitemap;
   const skipRenderList = [
     '**/*.js',
     '**/*.css'
@@ -20,6 +22,8 @@ module.exports = function(locals) {
       skipRenderList.push(skip_render);
     }
   }
+
+  const isIncludeXMLSiteMap = [...siteMapFileCfg || []].filter(v => extname(v) === '.xml').length > 0;
 
   const posts = [].concat(locals.posts.toArray(), locals.pages.toArray())
     .filter(post => {
@@ -67,11 +71,20 @@ module.exports = function(locals) {
         });
       }
 
-
-      if (site_url[site_url.length - 1] === '/') {
-        sitemapFileNames.push(`${site_url}${resList[i].path}${zipExt}`);
+      if (isIncludeXMLSiteMap) {
+        if (extname(resList[i].path) === '.xml') {
+          if (site_url[site_url.length - 1] === '/') {
+            sitemapFileNames.push(`${site_url}${resList[i].path}${zipExt}`);
+          } else {
+            sitemapFileNames.push(`${site_url}/${resList[i].path}${zipExt}`);
+          }
+        }
       } else {
-        sitemapFileNames.push(`${site_url}/${resList[i].path}${zipExt}`);
+        if (site_url[site_url.length - 1] === '/') {
+          sitemapFileNames.push(`${site_url}${resList[i].path}${zipExt}`);
+        } else {
+          sitemapFileNames.push(`${site_url}/${resList[i].path}${zipExt}`);
+        }
       }
     }
 

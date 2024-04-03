@@ -4,6 +4,8 @@
   <sitemap>
     <loc>{{gzurl}}</loc>
     <lastmod>{{sNow}}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </sitemap>
   {% endfor %}
 </sitemapindex>

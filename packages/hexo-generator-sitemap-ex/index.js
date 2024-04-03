@@ -10,7 +10,7 @@ hexo.config.sitemap = Object.assign({
   categories: true,
   site_url: hexo.config.url,
   gzip: false,
-  max_urls_per_sitemap: 50000
+  max_urls_per_sitemap: 21000
 }, hexo.config.sitemap);
 
 const config = hexo.config.sitemap;

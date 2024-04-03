@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-sitemap-ex",
-  "version": "3.3.4",
+  "version": "3.4.0",
   "description": "Sitemap and Sitemap Index files generator plugin for Hexo",
   "main": "index",
   "scripts": {
