@@ -8,7 +8,7 @@
     {% elif post.date %}
     <lastmod>{{ post.date | formatDate }}</lastmod>
     {% endif %}
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   {% endfor %}
