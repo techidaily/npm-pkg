@@ -30,7 +30,8 @@ module.exports = function(locals) {
       return post.sitemap !== false && !isMatch(post.source, skipRenderList);
     })
     .sort((a, b) => {
-      return b.updated - a.updated;
+      // 按照旧的在前，新的在后
+      return a.updated - b.updated;
     });
 
   if (posts.length <= 0) {

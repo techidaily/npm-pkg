@@ -18,7 +18,7 @@ module.exports = function(config) {
 
   // Extract date from datetime
   env.addFilter('formatDate', input => {
-    return input.toISOString().substring(0, 10);
+    return input.toISOString();
   });
 
   const sitemapSrc = join(__dirname, '../sitemap-index.xml');
