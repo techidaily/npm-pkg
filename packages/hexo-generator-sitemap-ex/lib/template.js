@@ -19,7 +19,7 @@ module.exports = function(config, fileIndex = 0) {
 
   // Extract date from datetime
   env.addFilter('formatDate', input => {
-    return input.toISOString().substring(0, 10);
+    return input.toISOString();
   });
 
   function temp(p) {

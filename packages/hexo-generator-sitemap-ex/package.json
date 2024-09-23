@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-sitemap-ex",
-  "version": "3.6.0",
+  "version": "3.6.4",
   "description": "Sitemap and Sitemap Index files generator plugin for Hexo",
   "main": "index",
   "scripts": {
@@ -26,10 +26,9 @@
     "generator"
   ],
   "authors": [
-    "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)"
+    "techidaily<support@techidaily.com> (http://techidaily.com)"
   ],
   "maintainers": [
-    "Abner Chou <hi@abnerchou.me> (http://abnerchou.me)",
     "techidaily<support@techidaily.com> (http://techidaily.com)"
   ],
   "license": "MIT",
